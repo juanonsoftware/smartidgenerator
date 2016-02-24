@@ -7,17 +7,28 @@ namespace UniqueNumberGenerator
     {
         static void Main(string[] args)
         {
-            var g = new TimebaseHexIdGenerator(1);
+            var g1 = new TimebaseHexIdGenerator();
+            var g2 = new SlimHexIdGenerator();
+
             var t1 = DateTime.Now.Second;
-            var count = 0;
+            var count1 = 0;
 
             while (DateTime.Now.Second - t1 < 1)
             {
-                Console.WriteLine(g.NewId());
-                count += 1;
+                Console.WriteLine(g1.NewId());
+                count1 += 1;
             }
 
-            Console.WriteLine("Total: " + count);
+            t1 = DateTime.Now.Second;
+            var count2 = 0;
+            while (DateTime.Now.Second - t1 < 1)
+            {
+                Console.WriteLine(g2.NewId());
+                count2 += 1;
+            }
+
+            Console.WriteLine("Total 1: " + count1);
+            Console.WriteLine("Total 2: " + count2);
             Console.ReadLine();
         }
     }
