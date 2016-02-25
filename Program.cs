@@ -1,7 +1,7 @@
-﻿using GdNet.Common.IdGenerators;
-using System;
+﻿using System;
 using System.IO;
 using System.Text;
+using Rabbit.Uniquators;
 
 namespace UniqueNumberGenerator
 {

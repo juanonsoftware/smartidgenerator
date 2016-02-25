@@ -32,9 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GdNet.Common, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\GdNet.Common.1.5.1\lib\GdNet.Common.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Rabbit.Uniquators">
+      <HintPath>packages\Rabbit.Uniquators.1.0.0\lib\Rabbit.Uniquators.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
