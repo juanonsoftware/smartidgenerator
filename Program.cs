@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Rabbit.Uniquators;
+using System;
 using System.IO;
 using System.Text;
-using Rabbit.Uniquators;
 
 namespace UniqueNumberGenerator
 {
@@ -18,7 +18,7 @@ namespace UniqueNumberGenerator
             var sb = new StringBuilder();
             var count1 = 0;
 
-            while ((DateTime.Now - t1).Seconds < 1)
+            while ((DateTime.Now - t1).TotalSeconds < 1)
             {
                 sb.AppendLine(g1.NewId());
                 count1 += 1;
@@ -28,7 +28,7 @@ namespace UniqueNumberGenerator
 
             t1 = DateTime.Now;
             var count2 = 0;
-            while ((DateTime.Now - t1).Seconds < 1)
+            while ((DateTime.Now - t1).TotalSeconds < 1)
             {
                 sb.AppendLine(g2.NewId());
                 count2 += 1;
@@ -38,7 +38,7 @@ namespace UniqueNumberGenerator
 
             t1 = DateTime.Now;
             var count3 = 0;
-            while ((DateTime.Now - t1).Seconds < 1)
+            while ((DateTime.Now - t1).TotalSeconds < 1)
             {
                 sb.AppendLine(g3.NewId());
                 count3 += 1;
@@ -48,7 +48,7 @@ namespace UniqueNumberGenerator
 
             t1 = DateTime.Now;
             var count4 = 0;
-            while ((DateTime.Now - t1).Seconds < 1)
+            while ((DateTime.Now - t1).TotalSeconds < 1)
             {
                 sb.AppendLine(g4.NewId());
                 count4 += 1;
@@ -66,6 +66,7 @@ namespace UniqueNumberGenerator
             //File.WriteAllText("Guid.txt", sb.ToString());
             sb.Clear();
 
+            Console.WriteLine("Generated ID(s) in one second");
             Console.WriteLine("TimebaseHexIdGenerator: " + count1);
             Console.WriteLine("SlimHexIdGenerator: " + count2);
             Console.WriteLine("ShortHexIdGenerator: " + count3);
